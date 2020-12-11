@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="photo explore active">
+            <h3>Explore The World</h3>
+        </div>
+
+        <div class="photo forest">
+            <h3>Wild Forest</h3>
+        </div>
+
+        <div class="photo sunny">
+            <h3>Sunny Beach</h3>
+        </div>
+
+        <div class="photo winter">
+            <h3>City On Winter</h3>
+        </div>
+
+        <div class="photo mountain">
+            <h3>Mountain Clouds</h3>
+        </div>
+    </div>
+    
+
+
+    <script>
+        const pictures = document.querySelectorAll(".photo");
+
+        pictures.forEach(photo => {
+            photo.addEventListener('click', () => {
+                removeActiveClass();
+                photo.classList.add("active");
+            })
+        })
+
+        function removeActiveClass() {
+            pictures.forEach(photo => {
+                photo.classList.remove("active");
+            })
+        }
+
+    </script>
+</body>
+</html>

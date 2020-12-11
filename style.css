@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.container div {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    border-radius: 45px;
+    height: 80vh;
+    background-size: cover;
+    margin: 0 10px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+} 
+
+.container > div::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    display: block;
+    border-radius: 45px;
+}
+h3{
+    position: absolute;
+    color: #ffffff;
+    bottom: 20px;
+    left: 20px;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.explore{
+    background: url(img/explore.jpg) center no-repeat;
+}
+
+.forest{
+    background: url(img/forest.jpg) center no-repeat;
+}
+
+.sunny{
+    background: url(img/sunny.jpg) center no-repeat;
+}
+
+.winter{
+    background: url(img/winter.jpg) center no-repeat;
+}
+
+.mountain{
+    background: url(img/mountain.jpg) center no-repeat;
+}
+
+div.active{
+    flex: 8;
+}
+
+.container div.active h3 {
+    opacity: 1;
+}
+
+/* media query */
+@media screen and (max-width: 480px){
+    .container{
+        width: 100%;
+    }
+}
